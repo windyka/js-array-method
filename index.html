@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Demo Array</h1>
+    <h4>If Array</h4>
+    <p id="h4"></p>
+    <h5>Multiply array by 10 :</h5>
+    <p id="multiply"></p>
+
+    <script>
+      // Looping an array while multiplicated by 10
+      const numbers = [1, 2, 3, 4, 5];
+
+      let newNumbers = [];
+
+      for (let i = 0; i < numbers.length; i++) {
+        newNumbers.push(numbers[i] * 10);
+      }
+      alert('click OK to continue');
+      document.getElementById('h4').innerHTML = ' is ' + numbers;
+      document.getElementById('multiply').innerHTML =
+        'Result is : ' + newNumbers;
+    </script>
+  </body>
+</html>
