@@ -7,14 +7,29 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- 1. -->
     <h1>Demo Array</h1>
     <h4>If Array</h4>
     <p id="h4"></p>
     <h5>Multiply array by 10 :</h5>
     <p id="multiply"></p>
+    <!-- 1. -->
+    <!-- 2. -->
+    <h3>By .map</h3>
+    <p id="array-map"></p>
+    <p id="map"></p>
+    <p id="result-map"></p>
+    <!-- 2. -->
+    <!-- 3. -->
+    <h3>Choose Even and Odd Numbers</h3>
+    <p>Numbers of an Array is:</p>
+    <p id="array-will-choose"></p>
+    <p id="even-number"></p>
+    <p id="odd-number"></p>
+    <!-- 3. -->
 
     <script>
-      // Looping an array while multiplicated by 10
+      // 1. Looping an array while multiplicated by 10
       const numbers = [1, 2, 3, 4, 5];
 
       let newNumbers = [];
@@ -26,6 +41,44 @@
       document.getElementById('h4').innerHTML = ' is ' + numbers;
       document.getElementById('multiply').innerHTML =
         'Result is : ' + newNumbers;
+
+      // 2. Looping an array with map
+      const mappingArray = [10, 20, 30, 40, 50];
+
+      const resultMap = mappingArray.map(num => {
+        return num * 10;
+      });
+
+      // console.log(resultMap);
+      document.getElementById('array-map').innerHTML =
+        'If Array is : ' + mappingArray;
+      document.getElementById('map').innerHTML = 'Result is :';
+      document.getElementById('result-map').innerHTML = resultMap;
+
+      // 3. Even and Odd
+
+      const choosedNumbers = [17, 25, 3, 7, 28, 4, 9, 12, 50];
+
+      let evenNumbers = [];
+
+      let oddNumbers = [];
+
+      choosedNumbers.map(num => {
+        if (num % 2 === 0) {
+          return evenNumbers.push(num);
+        } else {
+          return oddNumbers.push(num);
+        }
+      });
+
+      // console.log(evenNumbers);
+      document.getElementById(
+        'array-will-choose'
+      ).innerHTML = choosedNumbers.toString();
+      document.getElementById('even-number').innerHTML =
+        'Collected of even numbers are = ' + evenNumbers;
+      document.getElementById('odd-number').innerHTML =
+        'Collected of odd numbers are = ' + oddNumbers;
     </script>
   </body>
 </html>
